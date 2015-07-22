@@ -3,6 +3,15 @@
 # Recipe:: default
 #
 # Copyright (c) 2015 The Authors, All Rights Reserved.
+include_recipe 'firewall::default'
+# Open port 80 to incoming traffic.
+firewall_rule 'http' do
+  port 80
+  protocol :tcp
+  action :allow
+end
+
+# Install the Apache2 package.
 package 'apache2'
 
 # Enable and start the Apache2 service.
