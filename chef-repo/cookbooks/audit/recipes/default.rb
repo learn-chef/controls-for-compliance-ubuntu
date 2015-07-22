@@ -12,3 +12,13 @@ control_group 'Validate web services' do
     }
   end
 end
+
+control_group 'Validate network configuration and firewalls' do
+  control 'Ensure the firewall is active' do
+    it 'has the firewall active' do
+      expect(service('ufw')).to be_enabled
+      expect(service('ufw')).to be_running
+      expect(command('ufw status').stdout).to match(/Status: active/)
+    end
+  end
+end
