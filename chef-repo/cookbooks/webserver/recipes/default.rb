@@ -3,6 +3,7 @@
 # Recipe:: default
 #
 # Copyright (c) 2015 The Authors, All Rights Reserved.
+# Install the Apache2 package.
 package 'apache2'
 
 # Enable and start the Apache2 service.
