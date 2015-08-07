@@ -3,10 +3,10 @@
 # Recipe:: default
 #
 # Copyright (c) 2015 The Authors, All Rights Reserved.
-# Install the Apache2 package.
+# Install the apache2 package.
 package 'apache2'
 
-# Enable and start the Apache2 service.
+# Enable and start the apache2 service.
 service 'apache2' do
   action [:enable, :start]
 end
